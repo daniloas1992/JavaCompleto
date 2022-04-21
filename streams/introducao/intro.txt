@@ -1,0 +1,12 @@
+Built Ops = Operação de Construção, constrói o stream com base nas entradas e retorna uma stream.
+
+Int Ops = Operação Intermediária, processa os dados da stream, recebe uma stream e retorna 
+uma stream.
+
+Terminal Ops = Operação Terminal (Final), recebe uma stream e retorna algum outro valor final com 
+base nos dados da stream.
+
+
+Stream sequenciais
+Stream não ordenadas
+Paralel Stream

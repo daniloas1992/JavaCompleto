@@ -3,7 +3,7 @@ package streams.reduce;
 public class Aluno {
 
   final String nome;
-  final double nota;
+  final public double nota;
 
   public Aluno(String nome, double nota) {
     this.nome = nome;

@@ -1,0 +1,24 @@
+Quando estiever comparando dois objetos com == está comparando endereços de memória.
+
+Por exemplo:
+
+Produto p1 = new Produto();
+p1.nome = "Caneta";
+
+Produto p2 = new Produto();
+p2.nome = "Caneta";
+
+Ao verificar se p1==p2 está comparando o endereço de memória desses objetos, nesse caso vai dar falso.
+
+
+EQUALS é utilizado para definir a lógica/critério de comparação de entre dois objetos.
+
+No caso p1.equals(p2) resulta em falso, pois por padrão, se o método equals não for sobrescrito, executa a mesma comparação que o ==
+
+O retorno do EQUALS é um boolean
+O retorno do HASHCODE é um int
+
+O EQUALS é mais lento para ser executado.
+
+O HASHCODE é mais rápido e com ele da para separar os elementos que tem possibilidade de serem iguais de acordo com algum critério, 
+em seguida pode ser utilizado o EQUALS para confirmar.

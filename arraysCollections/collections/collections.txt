@@ -1,0 +1,22 @@
+SET:
+    Não ordenado (Por padrão)
+    Não indexado
+    Não aceita repetição
+
+LIST:
+    Indexado
+    Aceita repetição
+
+MAP:
+    Chave/Valor
+    Chave não aceita repetição
+    Valor aceita repetição
+
+QUEUE:
+    Implementa fila
+    Primeiro a entrar é o primeiro a sair (FIFO)
+
+STACK:
+    Implementa pilha
+    Último a entrar é o primeiro a sair (LIFO)
+

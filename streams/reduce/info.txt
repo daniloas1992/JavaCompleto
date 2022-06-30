@@ -1,0 +1,7 @@
+O Reduce possui dois parâmetros: um acumulador e uma variável que representa cad aum dos elementos dentro da stream
+
+O acumulador pode receber um valor inicial
+
+Cada uma das iteraçẽos recebe o acumulador e a variável contendo o elemento iterado
+
+O acumulador recebe resultado da iteração anterior

@@ -1,0 +1,8 @@
+Tipos de erros: 
+    -Compilação: .java -> .class
+    -Execução
+
+
+Throwable
+    -Error: Não pode ser recuperado
+    -Exception: Exceções que podem ser tratadas

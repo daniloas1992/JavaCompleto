@@ -2,6 +2,8 @@ Tipos de erros:
     -Compilação: .java -> .class
     -Execução
 
+Quando cria exceção personalizada precisa escolher se vai estender de Exception ou de RuntimeException
+    -Exception: Precisa usar "throws" para checar a exceção
 
 Throwable
     -Error: Não pode ser recuperado

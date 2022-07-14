@@ -3,6 +3,8 @@ package projeto.campoMinado.src.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import projeto.campoMinado.src.exceptions.ExplosionException;
+
 public class Field {
 
     private final int row;
@@ -39,6 +41,35 @@ public class Field {
         }
 
         return false;
+    }
+
+    protected void changeMarked() {
+        if(!marked) {
+            marked = !marked;
+        }
+    }
+
+    protected boolean open() {
+
+        if(!opened && !marked) {
+            opened = true;
+
+            if(hasBomb) {
+                throw new ExplosionException();
+            }
+
+            if(safeNeighborhood()) {
+                neighboors.forEach(n -> n.open());
+            }
+
+            return true;
+        }
+
+        return false;
+    }
+
+    protected boolean safeNeighborhood() {
+        return neighboors.stream().noneMatch(n -> n.hasBomb);
     }
     
 }

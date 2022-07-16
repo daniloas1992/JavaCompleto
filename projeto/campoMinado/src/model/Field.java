@@ -43,13 +43,13 @@ public class Field {
         return false;
     }
 
-    protected void changeMarked() {
-        if(!marked) {
+    public void changeMarked() {
+        if(!opened) {
             marked = !marked;
         }
     }
 
-    protected boolean open() {
+    public boolean open() {
 
         if(!opened && !marked) {
             opened = true;
@@ -70,6 +70,22 @@ public class Field {
 
     protected boolean safeNeighborhood() {
         return neighboors.stream().noneMatch(n -> n.hasBomb);
+    }
+
+    public boolean isMarked() {
+        return marked;
+    }
+
+    public void setBomb() {
+        hasBomb = true;
+    }
+
+    public boolean isOpened() {
+        return opened;
+    }
+
+    public boolean isClosed() {
+        return !opened;
     }
     
 }

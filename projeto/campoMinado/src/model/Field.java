@@ -80,12 +80,59 @@ public class Field {
         hasBomb = true;
     }
 
+    public boolean hasBomb() {
+        return hasBomb;
+    }
+
     public boolean isOpened() {
         return opened;
+    }
+
+    void setOpened(final boolean opened) {
+        this.opened = opened;
     }
 
     public boolean isClosed() {
         return !opened;
     }
+
+    public int getRow() {
+        return row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public boolean goalAchieved() {
+        final boolean unraveled = !hasBomb && opened;
+        final boolean covered = hasBomb && marked;
+        return unraveled || covered;
+    }
+
+    public long neighboorsBomb() {
+       return neighboors.stream().filter(v -> v.hasBomb).count();
+    }
     
+    public void restart() {
+        hasBomb = false;
+        opened = false;
+        marked = false;
+    }
+
+    @Override
+    public String toString() {
+        if(marked) {
+            return "x";
+        } else if (opened && hasBomb) {
+            return "*";
+        } else if (opened && neighboorsBomb() > 0) {
+            return Long.toString(neighboorsBomb());
+        } else if (opened) {
+            return " ";
+        } else {
+            return "?";
+        }
+    }
+
 }

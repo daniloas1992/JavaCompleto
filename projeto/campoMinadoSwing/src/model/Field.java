@@ -84,7 +84,7 @@ public class Field {
         return false;
     }
 
-    protected boolean safeNeighborhood() {
+    public boolean safeNeighborhood() {
         return neighboors.stream().noneMatch(n -> n.hasBomb);
     }
 
@@ -130,14 +130,16 @@ public class Field {
         return unraveled || covered;
     }
 
-    public long neighboorsBomb() {
-       return neighboors.stream().filter(v -> v.hasBomb).count();
+    public int neighboorsBomb() {
+       return (int)neighboors.stream().filter(v -> v.hasBomb).count();
     }
     
     public void restart() {
         hasBomb = false;
         opened = false;
         marked = false;
+
+        notifyObservers(FieldEvent.RESTART);
     }
 
 }

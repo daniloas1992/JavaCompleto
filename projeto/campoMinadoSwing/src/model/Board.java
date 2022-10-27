@@ -117,6 +117,7 @@ public class Board implements FieldObserver{
     private void showBombs() {
         fields.stream()
               .filter(field -> field.hasBomb())
+              .filter(field -> !field.isMarked())
               .forEach(field -> field.setOpened(true));
     }    
 }

@@ -49,6 +49,10 @@ public class DAO<E> {
 		return this.openTransaction().insert(entity).closeTransaction();
 	}
 	
+	public E selectByID(Object id) {
+		return em.find(myClass, id);
+	}
+	
 	public List<E> selectAll() {
 		return this.selectAll(10, 0);
 	}

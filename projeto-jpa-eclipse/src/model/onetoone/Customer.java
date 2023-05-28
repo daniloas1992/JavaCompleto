@@ -1,5 +1,6 @@
 package model.onetoone;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,7 +19,7 @@ public class Customer {
 	
 	private String name;
 	
-	@OneToOne
+	@OneToOne(cascade = {CascadeType.PERSIST}) //Ajusta a ordem de grupo de inserts para garantir que a FK vai estar disponível 
 	@JoinColumn(name = "chair_id", unique = true)
 	private Chair chair;
 

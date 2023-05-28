@@ -8,6 +8,8 @@
 		
 		<class>model.basic.User</class>
 		<class>model.basic.Product</class>
+		<class>model.onetoone.Chair</class>
+		<class>model.onetoone.Customer</class>
 
 		<!--<mapping-file>META-INF/consultas.xml</mapping-file> -->
 

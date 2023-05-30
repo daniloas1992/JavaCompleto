@@ -1,8 +1,8 @@
 package test.onetomany;
 
 import infra.DAO;
-import model.manytomany.ItemOrder;
-import model.manytomany.Order;
+import model.onetomany.ItemOrder;
+import model.onetomany.Order;
 
 public class GetOrders {
 	

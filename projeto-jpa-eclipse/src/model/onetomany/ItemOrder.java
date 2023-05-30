@@ -1,4 +1,4 @@
-package model.manytomany;
+package model.onetomany;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

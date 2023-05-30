@@ -10,8 +10,10 @@
 		<class>model.basic.Product</class>
 		<class>model.onetoone.Chair</class>
 		<class>model.onetoone.Customer</class>
-		<class>model.manytomany.Order</class>
-		<class>model.manytomany.ItemOrder</class>
+		<class>model.onetomany.Order</class>
+		<class>model.onetomany.ItemOrder</class>
+		<class>model.manytomany.Uncle</class>
+		<class>model.manytomany.Nephew</class>
 
 		<!--<mapping-file>META-INF/consultas.xml</mapping-file> -->
 

@@ -1,4 +1,4 @@
-package model.manytomany;
+package model.onetomany;
 
 import java.util.Date;
 import java.util.List;

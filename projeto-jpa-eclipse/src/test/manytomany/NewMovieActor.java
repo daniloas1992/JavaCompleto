@@ -9,7 +9,7 @@ public class NewMovieActor {
 	public static void main(String[] args) {
 		
 		Movie movieA = new Movie("Movie A", 5.8);
-		Movie movieB = new Movie("Movie A", 6.7);
+		Movie movieB = new Movie("Movie B", 6.7);
 		
 		Actor actorA = new Actor("João das Neves");
 		Actor actorB = new Actor("José Tempestade");

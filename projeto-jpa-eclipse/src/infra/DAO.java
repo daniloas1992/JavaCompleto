@@ -80,6 +80,11 @@ public class DAO<E> {
 		return query.getResultList();
 	}
 	
+	public E selectByNativeQuery(String queryName, Object... params) {
+		List<E> list = selectByQuery(queryName, params);
+		return list.isEmpty() ? null : list.get(0);
+	}
+	
 	public void close() {
 		em.close();
 	}

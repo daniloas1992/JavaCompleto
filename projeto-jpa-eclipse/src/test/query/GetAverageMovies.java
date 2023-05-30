@@ -1,4 +1,4 @@
-package test.manytomany;
+package test.query;
 
 import infra.DAO;
 import model.query.ScoreMovie;

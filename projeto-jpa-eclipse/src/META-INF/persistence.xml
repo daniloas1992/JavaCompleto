@@ -21,6 +21,8 @@
 		<class>model.compose.Adress</class>
 		<class>model.compose.Supplier</class>
 		<class>model.compose.Employee</class>
+		<class>model.inheritance.Student</class>
+		<class>model.inheritance.StudentSchorlarship</class>
 
 		<!--<mapping-file>META-INF/consultas.xml</mapping-file> -->
 

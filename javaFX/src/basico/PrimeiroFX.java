@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class PrimeiroFX extends Application{
+public class PrimeiroFX extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {

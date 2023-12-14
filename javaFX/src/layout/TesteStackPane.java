@@ -1,5 +1,6 @@
 package layout;
 
+import javafx.application.Platform;
 import javafx.scene.layout.StackPane;
 
 public class TesteStackPane extends StackPane {
@@ -21,6 +22,24 @@ public class TesteStackPane extends StackPane {
 				getChildren().get(5).toBack(); // Pega o elemento do índice "5" e envia pro começo (Baixo da pilha)
 			}
 		});
+		
+		Thread t = new Thread(() -> {
+			while(true) {
+				try {
+					Thread.sleep(3000);
+					
+					Platform.runLater(() -> {  // Precisa executar dentro da Thread do JavaFX
+						getChildren().get(0).toFront();
+					});					
+					
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
+				}
+				
+			}
+		});
+		t.setDaemon(true); //Se a thread principal finalizar, esta também será finalizada
+		t.start();
 		
 	}
 

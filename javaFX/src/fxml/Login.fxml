@@ -11,10 +11,7 @@
 	vgap="15">
 	
 	<padding>
-		<Insets  
-			left="40"
-			right="40"
-			top="40"/>
+		<Insets left="40" right="40" top="40" bottom="40"/>
 	</padding>
 	
 	<columnConstraints>
@@ -28,6 +25,10 @@
 	       GridPane.columnSpan="2"
 	       GridPane.halignment="CENTER"
 	       styleClass="login-titulo">
+	       
+	       <GridPane.margin>
+	           <Insets top="20" bottom="20"/>
+	       </GridPane.margin>
 	</Label>
 	
 	<Label text="E-mail:" 
@@ -58,6 +59,10 @@
 	        GridPane.halignment="CENTER"
 	        onAction="#entrar"
 	        styleClass="login-form-button">
+	        
+	        <GridPane.margin>
+	           <Insets top="20" bottom="20"/>
+	       </GridPane.margin>
 	
 	</Button>
 

@@ -17,7 +17,7 @@ public class AppFXML extends Application {
 		URL arquivoFXML = getClass().getResource("/fxml/Login.fxml");
 		GridPane raiz = FXMLLoader.load(arquivoFXML);
 		
-		Scene cena = new Scene(raiz, 350, 400);
+		Scene cena = new Scene(raiz, 350, 350);
 		cena.getStylesheets().add(aarquivoCss);
 		
 		primaryStage.setResizable(false);

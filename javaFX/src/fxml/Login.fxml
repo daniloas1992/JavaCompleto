@@ -4,16 +4,19 @@
 <?import javafx.scene.control.*?>
 
 <GridPane xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="fxml.LoginController">
+	fx:controller="fxml.LoginController"
+	styleClass="login">
 
 	<Label text="Seja Bem Vindo"
 	       GridPane.columnIndex="0"
-	       GridPane.rowIndex="0">
+	       GridPane.rowIndex="0"
+	       styleClass="login-titulo">
 	</Label>
 	
 	<Label text="E-mail:" 
 	       GridPane.columnIndex="0"
-	       GridPane.rowIndex="1">
+	       GridPane.rowIndex="1"
+	       styleClass="login-form-label">
 	</Label>	
 	<TextField GridPane.columnIndex="1"
 	           GridPane.rowIndex="1"
@@ -23,7 +26,8 @@
 	
 	<Label text="Senha:"
 		   GridPane.columnIndex="0"
-	       GridPane.rowIndex="2">
+	       GridPane.rowIndex="2"
+	       styleClass="login-form-label">
 	</Label>
 	<PasswordField GridPane.columnIndex="1"
 	               GridPane.rowIndex="2"
@@ -33,7 +37,8 @@
 	<Button text="Entrar"
 	        GridPane.columnIndex="0"
 	        GridPane.rowIndex="3"
-	        onAction="#entrar">
+	        onAction="#entrar"
+	        styleClass="login-form-button">
 	
 	</Button>
 

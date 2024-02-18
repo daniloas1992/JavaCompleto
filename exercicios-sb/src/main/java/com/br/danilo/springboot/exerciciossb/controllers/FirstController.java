@@ -12,7 +12,7 @@ public class FirstController {
 	//@GetMapping(path = "/ola")
 	@GetMapping(path = {"/ola", "/saudacao"}) // Mais de uma URL para para o mesmo método
 	public String ola() {
-		return "Olá!";
+		return "Hello!";
 	}
 
 }

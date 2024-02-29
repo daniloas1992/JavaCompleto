@@ -3,6 +3,8 @@ package com.br.danilo.springboot.exerciciossb.controllers;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -46,6 +48,7 @@ public class ProductController {
 	
 	@RequestMapping(method = {RequestMethod.POST, RequestMethod.PUT})
 	public @ResponseBody Product saveProduct(@Valid Product product) {
+		
 		productRepository.save(product);
 		return product;
 	}
@@ -53,6 +56,13 @@ public class ProductController {
 	@GetMapping
 	public Iterable<Product> getProducts() {
 		return productRepository.findAll();
+	}
+	
+	@GetMapping(path= {"/page/{numPage}/{quantity}"})
+	public Iterable<Product> getProductsByPage(@PathVariable int numPage, @PathVariable int quantity) {
+		if(quantity > 5) quantity = 5;
+		Pageable page = PageRequest.of(numPage, quantity);
+		return productRepository.findAll(page);
 	}
 	
 	@GetMapping(path="/{id}")
@@ -64,5 +74,7 @@ public class ProductController {
 	public void deleteProduct(@PathVariable int id) {
 		productRepository.deleteById(id);
 	}
+	
+	
 
 }

@@ -1,4 +1,4 @@
-package com.br.danilo.springboot.exerciciossb.models;
+package com.br.danilo.springboot.exerciciossb.model.entities;
 
 public class Customer {
 	
